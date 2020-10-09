@@ -23,7 +23,7 @@ public class AddCustomerTest extends TestBase{
 		if (no==5) {
 			throw new SkipException("Skipping test case invocation count is 3");
 		}
-		
+		///Test
 		Assert.assertEquals(driver.getTitle(), "PSMS");
 		driver.findElement(By.xpath("//input[@id='id_uname']")).sendKeys("admin");
 		driver.findElement(By.xpath("//input[@id='id_password']")).sendKeys("issi123");
