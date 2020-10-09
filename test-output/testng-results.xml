@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-10-09T08:43:27 IST" name="Default suite" finished-at="2020-10-09T08:43:35 IST" duration-ms="8536">
+    <groups>
+    </groups>
+    <test started-at="2020-10-09T08:43:27 IST" name="Default test" finished-at="2020-10-09T08:43:35 IST" duration-ms="8536">
+      <class name="com.w2a.BaseClass.AddCustomerTest">
+        <test-method is-config="true" signature="startup()[pri:0, instance:com.w2a.BaseClass.AddCustomerTest@4de4b452]" started-at="2020-10-09T08:42:58 IST" name="startup" finished-at="2020-10-09T08:43:27 IST" duration-ms="28745" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startup -->
+        <test-method signature="addCustomer()[pri:0, instance:com.w2a.BaseClass.AddCustomerTest@4de4b452]" started-at="2020-10-09T08:43:27 IST" name="addCustomer" finished-at="2020-10-09T08:43:35 IST" duration-ms="8470" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCustomer -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.w2a.BaseClass.AddCustomerTest@4de4b452]" started-at="2020-10-09T08:43:36 IST" name="tearDown" finished-at="2020-10-09T08:43:41 IST" duration-ms="5340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.w2a.BaseClass.AddCustomerTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
