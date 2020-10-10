@@ -13,21 +13,23 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 
-public class TestBase {
+public class BaseTest {
 	public WebDriver driver;
 	public Properties config=new Properties();
 	public Properties or=new Properties();
 	public FileInputStream fls;
 	public Logger log = Logger.getLogger("TestBase");
 	public WebDriverWait wait;
-	
-	@BeforeSuite
+	public static ThreadLocal< WebDriver> drivers=new ThreadLocal<WebDriver>();
+	@BeforeClass
 	public void startup() {
 		if (driver==null) {
 
@@ -59,7 +61,7 @@ public class TestBase {
 				e.printStackTrace();
 			}
 			if (config.getProperty("browser").equals("chrome")) {
-				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\MALEPATI PUNEETH\\Downloads\\chromedriver.exe");
 				driver=new ChromeDriver();
 				log.debug("Chrome Launching !!!!");
 			}else if (config.getProperty("browser").equals("ff")) {
@@ -81,7 +83,10 @@ public class TestBase {
 			return false;
 		}
 	}
-	@AfterSuite
+	protected WebDriver driver() {
+		return drivers.get();
+	}
+	@AfterClass
 	public void tearDown() throws InterruptedException {
 		if (driver!=null) {
 			Thread.sleep(3000);

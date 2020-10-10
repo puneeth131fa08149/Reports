@@ -6,8 +6,9 @@
       <class name="com.w2a.BaseClass.AddCustomerTest">
         <methods>
           <include name="addCustomer"/>
-          <include name="startup"/>
           <include name="tearDown"/>
+          <include name="startup"/>
+          <include name="CustomerPage"/>
         </methods>
       </class> <!-- com.w2a.BaseClass.AddCustomerTest -->
     </classes>
